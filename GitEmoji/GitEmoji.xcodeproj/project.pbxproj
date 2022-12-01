@@ -1,0 +1,437 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4090D8D42937EE0800817D34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4090D8D32937EE0800817D34 /* AppDelegate.swift */; };
+		4090D8D62937EE0800817D34 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4090D8D52937EE0800817D34 /* SceneDelegate.swift */; };
+		4090D8D82937EE0800817D34 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4090D8D72937EE0800817D34 /* ViewController.swift */; };
+		4090D8DB2937EE0800817D34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4090D8D92937EE0800817D34 /* Main.storyboard */; };
+		4090D8DD2937EE0C00817D34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4090D8DC2937EE0C00817D34 /* Assets.xcassets */; };
+		4090D8E02937EE0C00817D34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4090D8DE2937EE0C00817D34 /* LaunchScreen.storyboard */; };
+		40F727C32937EF6700568705 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F727C12937EF6700568705 /* HomeViewController.swift */; };
+		40F727C42937EF6700568705 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40F727C22937EF6700568705 /* HomeViewController.xib */; };
+		40F727CA2937F8D400568705 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F727C92937F8D400568705 /* HomePresenter.swift */; };
+		40F727CC2937F8DD00568705 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F727CB2937F8DD00568705 /* HomeRouter.swift */; };
+		40F727D2293800FD00568705 /* AppleRepoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F727D0293800FD00568705 /* AppleRepoListViewController.swift */; };
+		40F727D3293800FD00568705 /* AppleRepoListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40F727D1293800FD00568705 /* AppleRepoListViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4090D8D02937EE0800817D34 /* GitEmoji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitEmoji.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4090D8D32937EE0800817D34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4090D8D52937EE0800817D34 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4090D8D72937EE0800817D34 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4090D8DA2937EE0800817D34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4090D8DC2937EE0C00817D34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4090D8DF2937EE0C00817D34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4090D8E12937EE0C00817D34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40F727C12937EF6700568705 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		40F727C22937EF6700568705 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		40F727C92937F8D400568705 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		40F727CB2937F8DD00568705 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		40F727D0293800FD00568705 /* AppleRepoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleRepoListViewController.swift; sourceTree = "<group>"; };
+		40F727D1293800FD00568705 /* AppleRepoListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppleRepoListViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4090D8CD2937EE0800817D34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4090D8C72937EE0800817D34 = {
+			isa = PBXGroup;
+			children = (
+				4090D8D22937EE0800817D34 /* GitEmoji */,
+				4090D8D12937EE0800817D34 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4090D8D12937EE0800817D34 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4090D8D02937EE0800817D34 /* GitEmoji.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4090D8D22937EE0800817D34 /* GitEmoji */ = {
+			isa = PBXGroup;
+			children = (
+				40F727CE293800D000568705 /* AppleRepos */,
+				40F727BF2937EF4600568705 /* Home */,
+				4090D8D32937EE0800817D34 /* AppDelegate.swift */,
+				4090D8D52937EE0800817D34 /* SceneDelegate.swift */,
+				4090D8D72937EE0800817D34 /* ViewController.swift */,
+				4090D8D92937EE0800817D34 /* Main.storyboard */,
+				4090D8DC2937EE0C00817D34 /* Assets.xcassets */,
+				4090D8DE2937EE0C00817D34 /* LaunchScreen.storyboard */,
+				4090D8E12937EE0C00817D34 /* Info.plist */,
+			);
+			path = GitEmoji;
+			sourceTree = "<group>";
+		};
+		40F727BF2937EF4600568705 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				40F727C62937F2B200568705 /* Router */,
+				40F727C52937F2AB00568705 /* Presenter */,
+				40F727C02937EF5400568705 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		40F727C02937EF5400568705 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				40F727C12937EF6700568705 /* HomeViewController.swift */,
+				40F727C22937EF6700568705 /* HomeViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		40F727C52937F2AB00568705 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				40F727C92937F8D400568705 /* HomePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		40F727C62937F2B200568705 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				40F727CB2937F8DD00568705 /* HomeRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		40F727CE293800D000568705 /* AppleRepos */ = {
+			isa = PBXGroup;
+			children = (
+				40F727CF293800D800568705 /* View */,
+			);
+			path = AppleRepos;
+			sourceTree = "<group>";
+		};
+		40F727CF293800D800568705 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				40F727D0293800FD00568705 /* AppleRepoListViewController.swift */,
+				40F727D1293800FD00568705 /* AppleRepoListViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4090D8CF2937EE0800817D34 /* GitEmoji */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4090D8E42937EE0C00817D34 /* Build configuration list for PBXNativeTarget "GitEmoji" */;
+			buildPhases = (
+				4090D8CC2937EE0800817D34 /* Sources */,
+				4090D8CD2937EE0800817D34 /* Frameworks */,
+				4090D8CE2937EE0800817D34 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GitEmoji;
+			productName = GitEmoji;
+			productReference = 4090D8D02937EE0800817D34 /* GitEmoji.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4090D8C82937EE0800817D34 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					4090D8CF2937EE0800817D34 = {
+						CreatedOnToolsVersion = 14.1;
+					};
+				};
+			};
+			buildConfigurationList = 4090D8CB2937EE0800817D34 /* Build configuration list for PBXProject "GitEmoji" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4090D8C72937EE0800817D34;
+			productRefGroup = 4090D8D12937EE0800817D34 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4090D8CF2937EE0800817D34 /* GitEmoji */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4090D8CE2937EE0800817D34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4090D8E02937EE0C00817D34 /* LaunchScreen.storyboard in Resources */,
+				4090D8DD2937EE0C00817D34 /* Assets.xcassets in Resources */,
+				4090D8DB2937EE0800817D34 /* Main.storyboard in Resources */,
+				40F727C42937EF6700568705 /* HomeViewController.xib in Resources */,
+				40F727D3293800FD00568705 /* AppleRepoListViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4090D8CC2937EE0800817D34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4090D8D82937EE0800817D34 /* ViewController.swift in Sources */,
+				40F727CC2937F8DD00568705 /* HomeRouter.swift in Sources */,
+				40F727D2293800FD00568705 /* AppleRepoListViewController.swift in Sources */,
+				4090D8D42937EE0800817D34 /* AppDelegate.swift in Sources */,
+				4090D8D62937EE0800817D34 /* SceneDelegate.swift in Sources */,
+				40F727CA2937F8D400568705 /* HomePresenter.swift in Sources */,
+				40F727C32937EF6700568705 /* HomeViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4090D8D92937EE0800817D34 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4090D8DA2937EE0800817D34 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4090D8DE2937EE0C00817D34 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4090D8DF2937EE0C00817D34 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4090D8E22937EE0C00817D34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4090D8E32937EE0C00817D34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4090D8E52937EE0C00817D34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CBJLEDS7Z4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GitEmoji/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "GitEmoji-LTDA.GitEmoji";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4090D8E62937EE0C00817D34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CBJLEDS7Z4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GitEmoji/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "GitEmoji-LTDA.GitEmoji";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4090D8CB2937EE0800817D34 /* Build configuration list for PBXProject "GitEmoji" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4090D8E22937EE0C00817D34 /* Debug */,
+				4090D8E32937EE0C00817D34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4090D8E42937EE0C00817D34 /* Build configuration list for PBXNativeTarget "GitEmoji" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4090D8E52937EE0C00817D34 /* Debug */,
+				4090D8E62937EE0C00817D34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4090D8C82937EE0800817D34 /* Project object */;
+}
