@@ -7,64 +7,192 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "DD739B9E-AAC8-40CE-80A8-892BD10E3987"
+            uuid = "EBD4062C-48C4-4DD9-9139-D1A223F2C0EF"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "GitEmoji/Home/Router/HomeRouter.swift"
+            filePath = "GitEmoji/RepoList/Adapter/AppleRepoListAdapter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "fetchAppleRepoList(page:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E1BDCCCF-29F0-4221-9C1A-2F3FEDA8C9BD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GitEmoji/RepoList/Adapter/AppleRepoListAdapter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "fetchAppleRepoList(page:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C33D6524-F281-428A-9D68-93B7056A14AA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GitEmoji/RepoList/Adapter/AppleRepoListAdapter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "fetchAppleRepoList(page:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D53AB86A-6DD2-434A-ACA1-3A9332147A82"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GitEmoji/RepoList/Storage/RepoStorage.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "save(repoList:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C15D5649-E57A-4FF8-BC1D-61093C8601E0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GitEmoji/RepoList/Storage/RepoStorage.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "33"
             endingLineNumber = "33"
-            landmarkName = "openAppleReposViewController()"
+            landmarkName = "save(repoList:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C9D3CF41-C976-4F31-B1BC-6D7CE5C04988"
+            uuid = "FEF75466-51CD-4A67-AE28-A2C28B9657C3"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "GitEmoji/Home/Presenter/HomePresenter.swift"
+            filePath = "GitEmoji/RepoList/Interactor/AppleRepoListInteractor.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "didSelectAppleReposButton()"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "didFetchRepoList(repoList:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "67C63CD0-C548-45FA-9605-9E767672AC67"
+            uuid = "32D76FBC-E284-402B-A5C7-9A925F9EDCF2"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "GitEmoji/Home/Presenter/HomePresenter.swift"
+            filePath = "GitEmoji/RepoList/Storage/RepoStorage.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "set(router:)"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "save(repoList:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "9563C5C0-DD3F-4A5C-9434-100ADA579D2E"
+            uuid = "0FB12B7F-4F6A-40D4-B8A1-EBD21F48BEA1"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "GitEmoji/SceneDelegate.swift"
+            filePath = "GitEmoji/RepoList/Storage/RepoStorage.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "scene(_:willConnectTo:options:)"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "save(repoList:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0FB12B7F-4F6A-40D4-B8A1-EBD21F48BEA1 - b492a9e66c31af9d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GitEmoji.RepoStorage.save(repoList: Swift.Array&lt;GitEmoji.Repo&gt;) -&gt; ()"
+                  moduleName = "GitEmoji"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wellingtonbezerra/Documents/gitemoji/GitEmoji/GitEmoji/RepoList/Storage/RepoStorage.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "363">
+               </Location>
+               <Location
+                  uuid = "0FB12B7F-4F6A-40D4-B8A1-EBD21F48BEA1 - f301e0134b50c304"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (GitEmoji.Repo) -&gt; () in GitEmoji.RepoStorage.save(repoList: Swift.Array&lt;GitEmoji.Repo&gt;) -&gt; ()"
+                  moduleName = "GitEmoji"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wellingtonbezerra/Documents/gitemoji/GitEmoji/GitEmoji/RepoList/Storage/RepoStorage.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "128">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9FE535A7-1626-45CB-BD7D-9DA088D53D48"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GitEmoji/RepoList/Storage/RepoStorage.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "save(repoList:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D3823FBC-A39D-4491-97DA-F150A680FFD4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GitEmoji/RepoList/Storage/RepoStorage.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "save(repoList:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
