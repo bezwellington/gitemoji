@@ -29,7 +29,7 @@ final class HomeRouter {
     func openAvatarListViewController() {}
 
     func openAppleReposViewController() {
-        let appleRepoListViewController = AppleRepoListViewController()
+        let appleRepoListViewController = AppleRepoListRouter().getViewController()
         self.viewController?.navigationController?.pushViewController(appleRepoListViewController, animated: true)
     }
 

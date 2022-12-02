@@ -19,6 +19,18 @@
 		40F727CC2937F8DD00568705 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F727CB2937F8DD00568705 /* HomeRouter.swift */; };
 		40F727D2293800FD00568705 /* AppleRepoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F727D0293800FD00568705 /* AppleRepoListViewController.swift */; };
 		40F727D3293800FD00568705 /* AppleRepoListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40F727D1293800FD00568705 /* AppleRepoListViewController.xib */; };
+		40F727D72938BFD200568705 /* AppleRepoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F727D52938BFD200568705 /* AppleRepoTableViewCell.swift */; };
+		40F727D82938BFD200568705 /* AppleRepoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40F727D62938BFD200568705 /* AppleRepoTableViewCell.xib */; };
+		40F727DC2938C44700568705 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F727DB2938C44700568705 /* ReusableView.swift */; };
+		40F727E22938D64900568705 /* AppleRepoListAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F727E12938D64900568705 /* AppleRepoListAdapter.swift */; };
+		40F727E42938D65800568705 /* AppleRepoListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F727E32938D65800568705 /* AppleRepoListRouter.swift */; };
+		40F727E62938D65F00568705 /* AppleRepoListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F727E52938D65F00568705 /* AppleRepoListInteractor.swift */; };
+		40F727E82938D66800568705 /* AppleRepoListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F727E72938D66800568705 /* AppleRepoListPresenter.swift */; };
+		40F727EA2938DCEF00568705 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F727E92938DCEF00568705 /* Repo.swift */; };
+		40F727ED2938E17100568705 /* RepoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F727EC2938E17100568705 /* RepoViewModel.swift */; };
+		40F727EF2938E17C00568705 /* RepoListViewModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F727EE2938E17C00568705 /* RepoListViewModelMapper.swift */; };
+		40F727F42938FF5100568705 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F727F32938FF5100568705 /* UserDefaults.swift */; };
+		40F727F72938FFA000568705 /* RepoStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F727F62938FFA000568705 /* RepoStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +48,18 @@
 		40F727CB2937F8DD00568705 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		40F727D0293800FD00568705 /* AppleRepoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleRepoListViewController.swift; sourceTree = "<group>"; };
 		40F727D1293800FD00568705 /* AppleRepoListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppleRepoListViewController.xib; sourceTree = "<group>"; };
+		40F727D52938BFD200568705 /* AppleRepoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleRepoTableViewCell.swift; sourceTree = "<group>"; };
+		40F727D62938BFD200568705 /* AppleRepoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppleRepoTableViewCell.xib; sourceTree = "<group>"; };
+		40F727DB2938C44700568705 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		40F727E12938D64900568705 /* AppleRepoListAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleRepoListAdapter.swift; sourceTree = "<group>"; };
+		40F727E32938D65800568705 /* AppleRepoListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleRepoListRouter.swift; sourceTree = "<group>"; };
+		40F727E52938D65F00568705 /* AppleRepoListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleRepoListInteractor.swift; sourceTree = "<group>"; };
+		40F727E72938D66800568705 /* AppleRepoListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleRepoListPresenter.swift; sourceTree = "<group>"; };
+		40F727E92938DCEF00568705 /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
+		40F727EC2938E17100568705 /* RepoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoViewModel.swift; sourceTree = "<group>"; };
+		40F727EE2938E17C00568705 /* RepoListViewModelMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListViewModelMapper.swift; sourceTree = "<group>"; };
+		40F727F32938FF5100568705 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		40F727F62938FFA000568705 /* RepoStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +92,8 @@
 		4090D8D22937EE0800817D34 /* GitEmoji */ = {
 			isa = PBXGroup;
 			children = (
-				40F727CE293800D000568705 /* AppleRepos */,
+				40F727D92938C40300568705 /* Shared */,
+				40F727CE293800D000568705 /* RepoList */,
 				40F727BF2937EF4600568705 /* Home */,
 				4090D8D32937EE0800817D34 /* AppDelegate.swift */,
 				4090D8D52937EE0800817D34 /* SceneDelegate.swift */,
@@ -116,21 +141,104 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
-		40F727CE293800D000568705 /* AppleRepos */ = {
+		40F727CE293800D000568705 /* RepoList */ = {
 			isa = PBXGroup;
 			children = (
+				40F727F52938FF9300568705 /* Storage */,
+				40F727EB2938DD5200568705 /* Entity */,
+				40F727E02938C51900568705 /* Adapter */,
+				40F727DF2938C51300568705 /* Router */,
+				40F727DE2938C50C00568705 /* Interactor */,
+				40F727DD2938C50600568705 /* Presenter */,
 				40F727CF293800D800568705 /* View */,
 			);
-			path = AppleRepos;
+			path = RepoList;
 			sourceTree = "<group>";
 		};
 		40F727CF293800D800568705 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				40F727D42938BFAF00568705 /* Cell */,
 				40F727D0293800FD00568705 /* AppleRepoListViewController.swift */,
 				40F727D1293800FD00568705 /* AppleRepoListViewController.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		40F727D42938BFAF00568705 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				40F727D52938BFD200568705 /* AppleRepoTableViewCell.swift */,
+				40F727D62938BFD200568705 /* AppleRepoTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		40F727D92938C40300568705 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				40F727DA2938C43900568705 /* Extension */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		40F727DA2938C43900568705 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				40F727DB2938C44700568705 /* ReusableView.swift */,
+				40F727F32938FF5100568705 /* UserDefaults.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		40F727DD2938C50600568705 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				40F727E72938D66800568705 /* AppleRepoListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		40F727DE2938C50C00568705 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				40F727E52938D65F00568705 /* AppleRepoListInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		40F727DF2938C51300568705 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				40F727E32938D65800568705 /* AppleRepoListRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		40F727E02938C51900568705 /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				40F727E12938D64900568705 /* AppleRepoListAdapter.swift */,
+			);
+			path = Adapter;
+			sourceTree = "<group>";
+		};
+		40F727EB2938DD5200568705 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				40F727E92938DCEF00568705 /* Repo.swift */,
+				40F727EC2938E17100568705 /* RepoViewModel.swift */,
+				40F727EE2938E17C00568705 /* RepoListViewModelMapper.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		40F727F52938FF9300568705 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				40F727F62938FFA000568705 /* RepoStorage.swift */,
+			);
+			path = Storage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +301,7 @@
 			files = (
 				4090D8E02937EE0C00817D34 /* LaunchScreen.storyboard in Resources */,
 				4090D8DD2937EE0C00817D34 /* Assets.xcassets in Resources */,
+				40F727D82938BFD200568705 /* AppleRepoTableViewCell.xib in Resources */,
 				4090D8DB2937EE0800817D34 /* Main.storyboard in Resources */,
 				40F727C42937EF6700568705 /* HomeViewController.xib in Resources */,
 				40F727D3293800FD00568705 /* AppleRepoListViewController.xib in Resources */,
@@ -206,9 +315,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40F727E22938D64900568705 /* AppleRepoListAdapter.swift in Sources */,
+				40F727DC2938C44700568705 /* ReusableView.swift in Sources */,
+				40F727EA2938DCEF00568705 /* Repo.swift in Sources */,
 				4090D8D82937EE0800817D34 /* ViewController.swift in Sources */,
 				40F727CC2937F8DD00568705 /* HomeRouter.swift in Sources */,
+				40F727F42938FF5100568705 /* UserDefaults.swift in Sources */,
+				40F727E42938D65800568705 /* AppleRepoListRouter.swift in Sources */,
+				40F727F72938FFA000568705 /* RepoStorage.swift in Sources */,
+				40F727D72938BFD200568705 /* AppleRepoTableViewCell.swift in Sources */,
 				40F727D2293800FD00568705 /* AppleRepoListViewController.swift in Sources */,
+				40F727ED2938E17100568705 /* RepoViewModel.swift in Sources */,
+				40F727E62938D65F00568705 /* AppleRepoListInteractor.swift in Sources */,
+				40F727E82938D66800568705 /* AppleRepoListPresenter.swift in Sources */,
+				40F727EF2938E17C00568705 /* RepoListViewModelMapper.swift in Sources */,
 				4090D8D42937EE0800817D34 /* AppDelegate.swift in Sources */,
 				4090D8D62937EE0800817D34 /* SceneDelegate.swift in Sources */,
 				40F727CA2937F8D400568705 /* HomePresenter.swift in Sources */,
