@@ -15,6 +15,8 @@ final class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.emojiImageView.image = UIImage(systemName: "questionmark.app.fill")
     }
     
     func setUp(presenter: HomePresenterProtocol) {
@@ -49,7 +51,16 @@ final class HomeViewController: UIViewController {
 
 extension HomeViewController: HomePresenterDelegate {
     
+    func showAlert(title: String, message: String) {
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
     func showRandomEmoji(imageURL: String) {
-        
+        guard let url = URL(string: imageURL) else { return }
+        self.emojiImageView.sd_setImage(with: url)
     }
 }

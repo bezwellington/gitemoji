@@ -12,10 +12,10 @@ protocol EmojiInteractorProtocol {
 }
 
 protocol EmojiInteractorDelegate: AnyObject {
-    func didFetchEmojiList(emojiList: [String : String])
+    func didFetchEmojiList(emojiList: [String : String], isCached: Bool)
     func didNotFetchEmojiList()
     
-    func didGetRandomEmojiImage(url: String)
+    func didGetRandomEmojiImage(url: String?)
 }
 
 final class EmojiInteractor {
@@ -43,7 +43,7 @@ extension EmojiInteractor: EmojiInteractorProtocol {
     
     func fetchEmojiList() {
         if let emojiList = self.storage.getEmojiList() {
-            self.delegate?.didFetchEmojiList(emojiList: emojiList)
+            self.delegate?.didFetchEmojiList(emojiList: emojiList, isCached: true)
         } else {
             self.adapter.fetchEmojiList()
         }
@@ -51,7 +51,7 @@ extension EmojiInteractor: EmojiInteractorProtocol {
     
     func getRandomEmojiImageURL() {
         let emojiList = self.storage.getEmojiList()
-        let randomEmojiImageURL = emojiList?.values.randomElement() ?? ""
+        let randomEmojiImageURL = emojiList?.values.randomElement()
         self.delegate?.didGetRandomEmojiImage(url: randomEmojiImageURL)
     }
 }
@@ -61,7 +61,7 @@ extension EmojiInteractor: EmojiAdapterDelegate {
     func didFetchEmojiList(emojiList: [String : String]) {
         self.storage.save(emojiList: emojiList)
         
-        self.delegate?.didFetchEmojiList(emojiList: emojiList)
+        self.delegate?.didFetchEmojiList(emojiList: emojiList, isCached: false)
     }
     
     func didNotFetchEmojiList() {

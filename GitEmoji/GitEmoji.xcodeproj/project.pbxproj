@@ -12,6 +12,7 @@
 		13C4AACC293C36FE003E8EDC /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C4AACB293C36FE003E8EDC /* Emoji.swift */; };
 		13C4AAD0293C3727003E8EDC /* EmojiInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C4AACF293C3727003E8EDC /* EmojiInteractor.swift */; };
 		13C4AAD2293C3735003E8EDC /* EmojiAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C4AAD1293C3735003E8EDC /* EmojiAdapter.swift */; };
+		3DE9343DD803C6D736632BD2 /* Pods_GitEmoji.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AFD66B49D4AB8EB155EB9FC /* Pods_GitEmoji.framework */; };
 		4090D8D42937EE0800817D34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4090D8D32937EE0800817D34 /* AppDelegate.swift */; };
 		4090D8D62937EE0800817D34 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4090D8D52937EE0800817D34 /* SceneDelegate.swift */; };
 		4090D8D82937EE0800817D34 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4090D8D72937EE0800817D34 /* ViewController.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0AFD66B49D4AB8EB155EB9FC /* Pods_GitEmoji.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitEmoji.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		13C4AAC2293C34E2003E8EDC /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		13C4AAC5293C35EA003E8EDC /* EmojiStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiStorage.swift; sourceTree = "<group>"; };
 		13C4AACB293C36FE003E8EDC /* Emoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emoji.swift; sourceTree = "<group>"; };
@@ -70,6 +72,8 @@
 		40F727EE2938E17C00568705 /* RepoListViewModelMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListViewModelMapper.swift; sourceTree = "<group>"; };
 		40F727F32938FF5100568705 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		40F727F62938FFA000568705 /* RepoStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoStorage.swift; sourceTree = "<group>"; };
+		AF1D9E336F33849448E43B57 /* Pods-GitEmoji.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitEmoji.release.xcconfig"; path = "Target Support Files/Pods-GitEmoji/Pods-GitEmoji.release.xcconfig"; sourceTree = "<group>"; };
+		CE22D2A3F208A8572DDA3B2A /* Pods-GitEmoji.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitEmoji.debug.xcconfig"; path = "Target Support Files/Pods-GitEmoji/Pods-GitEmoji.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DE9343DD803C6D736632BD2 /* Pods_GitEmoji.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,11 +147,23 @@
 			path = Adapter;
 			sourceTree = "<group>";
 		};
+		228E6E31981D38A0D9F7F2A5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CE22D2A3F208A8572DDA3B2A /* Pods-GitEmoji.debug.xcconfig */,
+				AF1D9E336F33849448E43B57 /* Pods-GitEmoji.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		4090D8C72937EE0800817D34 = {
 			isa = PBXGroup;
 			children = (
 				4090D8D22937EE0800817D34 /* GitEmoji */,
 				4090D8D12937EE0800817D34 /* Products */,
+				228E6E31981D38A0D9F7F2A5 /* Pods */,
+				830B86C976777E2E2D5789D8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -312,6 +329,14 @@
 			path = Storage;
 			sourceTree = "<group>";
 		};
+		830B86C976777E2E2D5789D8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0AFD66B49D4AB8EB155EB9FC /* Pods_GitEmoji.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -319,9 +344,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4090D8E42937EE0C00817D34 /* Build configuration list for PBXNativeTarget "GitEmoji" */;
 			buildPhases = (
+				19B32023A5444646AC23037A /* [CP] Check Pods Manifest.lock */,
 				4090D8CC2937EE0800817D34 /* Sources */,
 				4090D8CD2937EE0800817D34 /* Frameworks */,
 				4090D8CE2937EE0800817D34 /* Resources */,
+				00A585579B68B7AB05C9C5F3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -380,6 +407,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00A585579B68B7AB05C9C5F3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GitEmoji/Pods-GitEmoji-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GitEmoji/Pods-GitEmoji-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GitEmoji/Pods-GitEmoji-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		19B32023A5444646AC23037A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GitEmoji-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4090D8CC2937EE0800817D34 /* Sources */ = {
@@ -550,6 +619,7 @@
 		};
 		4090D8E52937EE0C00817D34 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE22D2A3F208A8572DDA3B2A /* Pods-GitEmoji.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -579,6 +649,7 @@
 		};
 		4090D8E62937EE0C00817D34 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF1D9E336F33849448E43B57 /* Pods-GitEmoji.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
