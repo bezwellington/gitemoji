@@ -15,13 +15,14 @@ protocol RepoStorageProtocol {
 final class RepoStorage: RepoStorageProtocol {
     
     private let userDefaults: ObjectSavable
+    private let key: String = "repoList"
     
     init(userDefaults: ObjectSavable = UserDefaults(suiteName: "gitEmoji.repoList") ?? .standard) {
         self.userDefaults = userDefaults
     }
     
     func save(repoList: [Repo]) {
-        var repoStorage = try? self.userDefaults.getObject([Int: Repo].self, forKey: "repoList")
+        var repoStorage = try? self.userDefaults.getObject([Int: Repo].self, forKey: self.key)
         if repoStorage == nil {
             repoStorage = [Int: Repo]()
         }
@@ -31,11 +32,11 @@ final class RepoStorage: RepoStorageProtocol {
             }
         }
         
-        try? self.userDefaults.setObject(repoStorage, forKey: "repoList")
+        try? self.userDefaults.setObject(repoStorage, forKey: self.key)
     }
     
     func getRepoList() -> [Repo]? {
-        let repoList = try? self.userDefaults.getObject([Int: Repo].self, forKey: "repoList")
+        let repoList = try? self.userDefaults.getObject([Int: Repo].self, forKey: self.key)
         let repo = repoList?.compactMap({ $1 })
         return repo
     }

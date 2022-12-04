@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13C4AAC3293C34E2003E8EDC /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C4AAC2293C34E2003E8EDC /* HomeInteractor.swift */; };
+		13C4AAC6293C35EA003E8EDC /* EmojiStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C4AAC5293C35EA003E8EDC /* EmojiStorage.swift */; };
+		13C4AACC293C36FE003E8EDC /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C4AACB293C36FE003E8EDC /* Emoji.swift */; };
+		13C4AAD0293C3727003E8EDC /* EmojiInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C4AACF293C3727003E8EDC /* EmojiInteractor.swift */; };
+		13C4AAD2293C3735003E8EDC /* EmojiAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C4AAD1293C3735003E8EDC /* EmojiAdapter.swift */; };
 		4090D8D42937EE0800817D34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4090D8D32937EE0800817D34 /* AppDelegate.swift */; };
 		4090D8D62937EE0800817D34 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4090D8D52937EE0800817D34 /* SceneDelegate.swift */; };
 		4090D8D82937EE0800817D34 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4090D8D72937EE0800817D34 /* ViewController.swift */; };
@@ -34,6 +39,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		13C4AAC2293C34E2003E8EDC /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		13C4AAC5293C35EA003E8EDC /* EmojiStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiStorage.swift; sourceTree = "<group>"; };
+		13C4AACB293C36FE003E8EDC /* Emoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emoji.swift; sourceTree = "<group>"; };
+		13C4AACF293C3727003E8EDC /* EmojiInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiInteractor.swift; sourceTree = "<group>"; };
+		13C4AAD1293C3735003E8EDC /* EmojiAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiAdapter.swift; sourceTree = "<group>"; };
 		4090D8D02937EE0800817D34 /* GitEmoji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitEmoji.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4090D8D32937EE0800817D34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4090D8D52937EE0800817D34 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +83,65 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13C4AAC1293C3448003E8EDC /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				13C4AAC2293C34E2003E8EDC /* HomeInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		13C4AAC7293C368A003E8EDC /* Emoji */ = {
+			isa = PBXGroup;
+			children = (
+				13C4AACE293C371B003E8EDC /* Adapter */,
+				13C4AACD293C3714003E8EDC /* Interactor */,
+				13C4AAC9293C36BC003E8EDC /* Entity */,
+				13C4AAC8293C36B1003E8EDC /* Storage */,
+			);
+			path = Emoji;
+			sourceTree = "<group>";
+		};
+		13C4AAC8293C36B1003E8EDC /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				13C4AAC5293C35EA003E8EDC /* EmojiStorage.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		13C4AAC9293C36BC003E8EDC /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				13C4AACB293C36FE003E8EDC /* Emoji.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		13C4AACA293C36DC003E8EDC /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				13C4AAC7293C368A003E8EDC /* Emoji */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		13C4AACD293C3714003E8EDC /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				13C4AACF293C3727003E8EDC /* EmojiInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		13C4AACE293C371B003E8EDC /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				13C4AAD1293C3735003E8EDC /* EmojiAdapter.swift */,
+			);
+			path = Adapter;
+			sourceTree = "<group>";
+		};
 		4090D8C72937EE0800817D34 = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +178,7 @@
 		40F727BF2937EF4600568705 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				13C4AAC1293C3448003E8EDC /* Interactor */,
 				40F727C62937F2B200568705 /* Router */,
 				40F727C52937F2AB00568705 /* Presenter */,
 				40F727C02937EF5400568705 /* View */,
@@ -177,6 +247,7 @@
 		40F727D92938C40300568705 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				13C4AACA293C36DC003E8EDC /* UseCase */,
 				40F727DA2938C43900568705 /* Extension */,
 			);
 			path = Shared;
@@ -316,11 +387,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				40F727E22938D64900568705 /* AppleRepoListAdapter.swift in Sources */,
+				13C4AAC3293C34E2003E8EDC /* HomeInteractor.swift in Sources */,
 				40F727DC2938C44700568705 /* ReusableView.swift in Sources */,
+				13C4AAD0293C3727003E8EDC /* EmojiInteractor.swift in Sources */,
 				40F727EA2938DCEF00568705 /* Repo.swift in Sources */,
 				4090D8D82937EE0800817D34 /* ViewController.swift in Sources */,
 				40F727CC2937F8DD00568705 /* HomeRouter.swift in Sources */,
 				40F727F42938FF5100568705 /* UserDefaults.swift in Sources */,
+				13C4AAD2293C3735003E8EDC /* EmojiAdapter.swift in Sources */,
 				40F727E42938D65800568705 /* AppleRepoListRouter.swift in Sources */,
 				40F727F72938FFA000568705 /* RepoStorage.swift in Sources */,
 				40F727D72938BFD200568705 /* AppleRepoTableViewCell.swift in Sources */,
@@ -332,6 +406,8 @@
 				4090D8D42937EE0800817D34 /* AppDelegate.swift in Sources */,
 				4090D8D62937EE0800817D34 /* SceneDelegate.swift in Sources */,
 				40F727CA2937F8D400568705 /* HomePresenter.swift in Sources */,
+				13C4AACC293C36FE003E8EDC /* Emoji.swift in Sources */,
+				13C4AAC6293C35EA003E8EDC /* EmojiStorage.swift in Sources */,
 				40F727C32937EF6700568705 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

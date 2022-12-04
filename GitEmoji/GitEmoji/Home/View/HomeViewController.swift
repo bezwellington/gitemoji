@@ -38,5 +38,10 @@ final class HomeViewController: UIViewController {
     }
     
     
+    @IBAction private func didSelectFetchEmojiButton(_ sender: Any) {
+        self.presenter?.didSelectFetchEmojiButton()
+    }
+    
+    
 }
 
