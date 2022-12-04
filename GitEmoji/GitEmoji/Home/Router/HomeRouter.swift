@@ -17,6 +17,8 @@ final class HomeRouter {
         let homeViewController = HomeViewController()
         homeViewController.setUp(presenter: presenter)
                 
+        presenter.setUp(delegate: homeViewController)
+        
         self.viewController = homeViewController
         
         return homeViewController
@@ -24,7 +26,6 @@ final class HomeRouter {
     
     func openEmojiListViewController() {}
     
-    func openRandomEmojiViewController() {}
 
     func openAvatarListViewController() {}
 

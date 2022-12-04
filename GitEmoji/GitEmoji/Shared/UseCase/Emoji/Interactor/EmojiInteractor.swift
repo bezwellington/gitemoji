@@ -8,11 +8,14 @@
 protocol EmojiInteractorProtocol {
     func setUp(delegate: EmojiInteractorDelegate)
     func fetchEmojiList()
+    func getRandomEmojiImageURL()
 }
 
 protocol EmojiInteractorDelegate: AnyObject {
     func didFetchEmojiList(emojiList: [String : String])
     func didNotFetchEmojiList()
+    
+    func didGetRandomEmojiImage(url: String)
 }
 
 final class EmojiInteractor {
@@ -44,6 +47,12 @@ extension EmojiInteractor: EmojiInteractorProtocol {
         } else {
             self.adapter.fetchEmojiList()
         }
+    }
+    
+    func getRandomEmojiImageURL() {
+        let emojiList = self.storage.getEmojiList()
+        let randomEmojiImageURL = emojiList?.values.randomElement() ?? ""
+        self.delegate?.didGetRandomEmojiImage(url: randomEmojiImageURL)
     }
 }
 
