@@ -12,7 +12,9 @@ protocol HomeInteractorProtocol {
 }
 
 protocol HomeInteractorDelegate: AnyObject {
-    func didGetRandomEmojiImage(url: String)
+    func didGetRandomEmojiImage(url: String?)
+    
+    func didFetchEmojiList(isCached: Bool)
 }
 
 
@@ -44,11 +46,14 @@ extension HomeInteractor: HomeInteractorProtocol {
 }
 
 extension HomeInteractor: EmojiInteractorDelegate {
+ 
+    func didFetchEmojiList(emojiList: [String : String], isCached: Bool) {
+        self.delegate?.didFetchEmojiList(isCached: isCached)
+    }
     
-    func didFetchEmojiList(emojiList: [String : String]) {}
     func didNotFetchEmojiList() {}
     
-    func didGetRandomEmojiImage(url: String) {
+    func didGetRandomEmojiImage(url: String?) {
         self.delegate?.didGetRandomEmojiImage(url: url)
     }
 }

@@ -20,6 +20,7 @@ protocol HomePresenterProtocol {
 
 protocol HomePresenterDelegate: AnyObject {
     func showRandomEmoji(imageURL: String)
+    func showAlert(title: String, message: String)
 }
 
 final class HomePresenter: HomePresenterProtocol {
@@ -69,7 +70,16 @@ final class HomePresenter: HomePresenterProtocol {
 
 extension HomePresenter: HomeInteractorDelegate {
     
-    func didGetRandomEmojiImage(url: String) {
-        self.delegate?.showRandomEmoji(imageURL: url)
+    func didGetRandomEmojiImage(url: String?) {
+        if let imageURL = url {
+            self.delegate?.showRandomEmoji(imageURL: imageURL)
+        } else {
+            self.delegate?.showAlert(title: "Atenção!", message: "Aperte primeiro o botão Fetch Emoji")
+        }
+    }
+    
+    func didFetchEmojiList(isCached: Bool) {
+        let message = isCached ? "Os Emojis já estão armazenados!" : "Emojis armazenados com sucesso!"
+        self.delegate?.showAlert(title: "Atenção!", message: message)
     }
 }
