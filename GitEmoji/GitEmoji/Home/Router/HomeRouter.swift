@@ -24,7 +24,10 @@ final class HomeRouter {
         return homeViewController
     }
     
-    func openEmojiListViewController() {}
+    func openEmojiListViewController() {
+        let emojiListViewController = EmojiListRouter().getViewController()
+        self.viewController?.navigationController?.pushViewController(emojiListViewController, animated: true)
+    }
     
 
     func openAvatarListViewController() {}

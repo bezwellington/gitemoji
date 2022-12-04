@@ -28,7 +28,7 @@ final class HomeViewController: UIViewController {
     }
     
     @IBAction private func didSelectEmojiListButton(_ sender: Any) {
-        
+        self.presenter?.didSelectEmojiListButton()
     }
     
     @IBAction private func didSelectAvatarListButton(_ sender: Any) {
