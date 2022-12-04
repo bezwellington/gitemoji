@@ -9,6 +9,8 @@ import UIKit
 
 final class HomeViewController: UIViewController {
 
+    @IBOutlet weak private var emojiImageView: UIImageView!
+    
     private var presenter: HomePresenterProtocol?
     
     override func viewDidLoad() {
@@ -20,7 +22,7 @@ final class HomeViewController: UIViewController {
     }
     
     @IBAction private func didSelectRandomEmojiButton(_ sender: Any) {
-        
+        self.presenter?.didSelectRandomEmojiButton()
     }
     
     @IBAction private func didSelectEmojiListButton(_ sender: Any) {
@@ -45,3 +47,9 @@ final class HomeViewController: UIViewController {
     
 }
 
+extension HomeViewController: HomePresenterDelegate {
+    
+    func showRandomEmoji(imageURL: String) {
+        
+    }
+}

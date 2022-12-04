@@ -18,23 +18,32 @@ protocol HomePresenterProtocol {
     func didSelectFetchEmojiButton()
 }
 
+protocol HomePresenterDelegate: AnyObject {
+    func showRandomEmoji(imageURL: String)
+}
 
 final class HomePresenter: HomePresenterProtocol {
     
-
+    private weak var delegate: HomePresenterDelegate?
+    
     private var router: HomeRouter?
     private let interactor: HomeInteractorProtocol
     
     init(interactor: HomeInteractorProtocol = HomeInteractor()) {
         self.interactor = interactor
+        self.interactor.setUp(delegate: self)
     }
     
     func set(router: HomeRouter) {
         self.router = router
     }
     
+    func setUp(delegate: HomePresenterDelegate) {
+        self.delegate = delegate
+    }
+    
     func didSelectRandomEmojiButton() {
-        self.router?.openRandomEmojiViewController()
+        self.interactor.getRandomEmoji()
     }
     
     func didSelectEmojiListButton() {
@@ -58,3 +67,9 @@ final class HomePresenter: HomePresenterProtocol {
     }
 }
 
+extension HomePresenter: HomeInteractorDelegate {
+    
+    func didGetRandomEmojiImage(url: String) {
+        self.delegate?.showRandomEmoji(imageURL: url)
+    }
+}
