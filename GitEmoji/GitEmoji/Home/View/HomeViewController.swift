@@ -10,6 +10,8 @@ import UIKit
 final class HomeViewController: UIViewController {
 
     @IBOutlet weak private var emojiImageView: UIImageView!
+    @IBOutlet weak private var searchBar: UISearchBar!
+    
     
     private var presenter: HomePresenterProtocol?
     
@@ -18,7 +20,7 @@ final class HomeViewController: UIViewController {
         
         self.emojiImageView.image = UIImage(systemName: "questionmark.app.fill")
     }
-    
+  
     func setUp(presenter: HomePresenterProtocol) {
         self.presenter = presenter
     }
@@ -39,6 +41,7 @@ final class HomeViewController: UIViewController {
     }
     
     @IBAction private func didSelectSearchButton(_ sender: Any) {
+        self.presenter?.didSelectSearchButton(text: self.searchBar.text)
     }
     
     
