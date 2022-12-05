@@ -9,6 +9,7 @@
 
 protocol EmojiListPresenterProtocol {
     func setUp(delegate: EmojiListPresenterDelegate)
+    func setUp(listType: EmojiListPresenter.ListType)
     func set(router: EmojiListRouter)
     func viewDidLoad()
     func didSelect(emojiViewModel: EmojiViewModel)
@@ -36,6 +37,7 @@ final class EmojiListPresenter {
     
     private var emojiList: [EmojiViewModel] = []
     private var filteredEmojiList: [EmojiViewModel] = []
+    private var listType: ListType = .none
 
     init(interactor: EmojiListInteractorProtocol = EmojiListInteractor()) {
         self.interactor = interactor
@@ -56,16 +58,35 @@ extension EmojiListPresenter: EmojiListPresenterProtocol {
         self.delegate = delegate
     }
     
+    func setUp(listType: EmojiListPresenter.ListType) {
+        self.listType = listType
+    }
+
     func viewDidLoad() {
-        self.interactor.fetchEmojiList()
+        if self.listType == .emoji {
+            self.interactor.fetchEmojiList()
+        } else {
+            self.interactor.fetchAvatarList()
+        }
     }
     
     func didSelect(emojiViewModel: EmojiViewModel) {
-        if let index = self.filteredEmojiList.firstIndex(where: {$0.id == emojiViewModel.id}) {
-            self.filteredEmojiList.remove(at: index)
+        if self.listType == .emoji {
+            if let index = self.filteredEmojiList.firstIndex(where: {$0.id == emojiViewModel.id}) {
+                self.filteredEmojiList.remove(at: index)
+            }
+            
+            self.delegate?.show(emojiList: self.filteredEmojiList)
+        } else {
+            if let index = self.emojiList.firstIndex(where: {$0.id == emojiViewModel.id}) {
+                self.emojiList.remove(at: index)
+            }
+            
+            self.delegate?.show(emojiList: self.emojiList)
+            
+            self.interactor.removeAvatar(avatarID: emojiViewModel.id)
         }
-        
-        self.delegate?.show(emojiList: self.filteredEmojiList)
+
     }
     
     func didRefresh() {
@@ -80,8 +101,8 @@ extension EmojiListPresenter: EmojiListPresenterProtocol {
 
 extension EmojiListPresenter: EmojiListInteractorDelegate {
     
-    func didFetchRepoList(emojiList: [String : String]) {
-        let emojiListViewModel = EmojiViewModelMapper.make(emojiList: emojiList)
+    func didFetchList(list: [String : String]) {
+        let emojiListViewModel = EmojiViewModelMapper.make(emojiList: list)
         
         self.emojiList = emojiListViewModel
         self.filteredEmojiList = emojiListViewModel
@@ -89,7 +110,17 @@ extension EmojiListPresenter: EmojiListInteractorDelegate {
         self.delegate?.show(emojiList: emojiListViewModel)
     }
     
-    func didNotFetchRepoList() {
+    func didNotFetchList() {
         self.delegate?.stopLoading()
+    }
+}
+
+
+extension EmojiListPresenter {
+    
+    enum ListType {
+        case emoji
+        case avatar
+        case none
     }
 }
