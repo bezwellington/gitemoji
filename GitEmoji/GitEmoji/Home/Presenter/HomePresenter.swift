@@ -16,6 +16,7 @@ protocol HomePresenterProtocol {
     func didSelectAppleReposButton()
     func didSelectSearchButton()
     func didSelectFetchEmojiButton()
+    func didSelectSearchButton(text: String?)
 }
 
 protocol HomePresenterDelegate: AnyObject {
@@ -66,10 +67,21 @@ final class HomePresenter: HomePresenterProtocol {
     func didSelectFetchEmojiButton() {
         self.interactor.fetchEmojiList()
     }
+    
+    func didSelectSearchButton(text: String?) {
+        if let text = text, text != "" {
+            self.interactor.fetchAvatar(text: text)
+        } else {
+            self.delegate?.showAlert(title: "Atenção!", message: "Digite o nome de um Avatar.")
+        }
+    }
 }
 
 extension HomePresenter: HomeInteractorDelegate {
+   
     
+    // MARK: - Emoji Image
+
     func didGetRandomEmojiImage(url: String?) {
         if let imageURL = url {
             self.delegate?.showRandomEmoji(imageURL: imageURL)
@@ -78,8 +90,22 @@ extension HomePresenter: HomeInteractorDelegate {
         }
     }
     
+    
+    // MARK: - Emoji List
+
     func didFetchEmojiList(isCached: Bool) {
         let message = isCached ? "Os Emojis já estão armazenados!" : "Emojis armazenados com sucesso!"
         self.delegate?.showAlert(title: "Atenção!", message: message)
+    }
+    
+    
+    // MARK: - Avatar
+    
+    func didFetchAvatar(avatar: Avatar) {
+        self.delegate?.showRandomEmoji(imageURL: avatar.avatar_url)
+    }
+    
+    func didNotFetchAvatar() {
+        self.delegate?.showAlert(title: "Atenção!", message: "Avatar não encontrado.")
     }
 }
