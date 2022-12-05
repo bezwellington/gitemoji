@@ -9,9 +9,10 @@ final class EmojiListRouter {
     
     private weak var viewController: EmojiListViewController?
     
-    func getViewController() -> EmojiListViewController {
+    func getViewController(listType: EmojiListPresenter.ListType) -> EmojiListViewController {
         
         let presenter = EmojiListPresenter()
+        presenter.setUp(listType: listType)
         presenter.set(router: self)
         
         let emojiListViewController = EmojiListViewController()

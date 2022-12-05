@@ -34,6 +34,7 @@ final class HomeViewController: UIViewController {
     }
     
     @IBAction private func didSelectAvatarListButton(_ sender: Any) {
+        self.presenter?.didSelectAvatarListButton()
     }
     
     @IBAction private func didSelectAppleReposButton(_ sender: Any) {

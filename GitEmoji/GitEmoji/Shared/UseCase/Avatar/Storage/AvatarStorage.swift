@@ -10,6 +10,8 @@ import Foundation
 protocol AvatarStorageProtocol {
     func save(avatar: Avatar)
     func getAvatar(login: String) -> Avatar?
+    func getAvatarList() -> [String: String]?
+    func removeAvatar(avatarID: String)
 }
 
 final class AvatarStorage: AvatarStorageProtocol {
@@ -22,7 +24,8 @@ final class AvatarStorage: AvatarStorageProtocol {
     }
     
     func save(avatar: Avatar) {
-        let dict = [avatar.login.lowercased(): avatar.avatar_url]
+        var dict = self.getAvatarList()
+        dict?[avatar.login.lowercased()] = avatar.avatar_url
         try? self.userDefaults.setObject(dict, forKey: self.key)
     }
     
@@ -33,5 +36,15 @@ final class AvatarStorage: AvatarStorageProtocol {
         } else {
             return nil
         }
+    }
+    
+    func getAvatarList() -> [String: String]? {
+        return try? self.userDefaults.getObject([String: String].self, forKey: self.key)
+    }
+    
+    func removeAvatar(avatarID: String) {
+        var dict = self.getAvatarList()
+        dict?.removeValue(forKey: avatarID)
+        try? self.userDefaults.setObject(dict, forKey: self.key)
     }
 }

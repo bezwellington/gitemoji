@@ -25,12 +25,15 @@ final class HomeRouter {
     }
     
     func openEmojiListViewController() {
-        let emojiListViewController = EmojiListRouter().getViewController()
-        self.viewController?.navigationController?.pushViewController(emojiListViewController, animated: true)
+        let genericListViewController = EmojiListRouter().getViewController(listType: .emoji)
+        self.viewController?.navigationController?.pushViewController(genericListViewController, animated: true)
     }
     
 
-    func openAvatarListViewController() {}
+    func openAvatarListViewController() {
+        let genericListViewController = EmojiListRouter().getViewController(listType: .avatar)
+        self.viewController?.navigationController?.pushViewController(genericListViewController, animated: true)
+    }
 
     func openAppleReposViewController() {
         let appleRepoListViewController = AppleRepoListRouter().getViewController()
