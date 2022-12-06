@@ -7,6 +7,9 @@
 
 import UIKit
 
+
+// MARK: - Class
+
 final class AppleRepoListViewController: UIViewController {
 
     @IBOutlet weak private var tableView: UITableView!
@@ -67,6 +70,9 @@ extension AppleRepoListViewController: UITableViewDelegate, UITableViewDataSourc
         }
     }
 }
+
+
+// MARK: - AppleRepoListPresenterDelegate
 
 extension AppleRepoListViewController: AppleRepoListPresenterDelegate {
     

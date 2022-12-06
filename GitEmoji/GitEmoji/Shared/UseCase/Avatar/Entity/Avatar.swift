@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Avatar: Codable {
+struct Avatar: Codable, Equatable {
     var login: String
     var avatar_url: String
 }

@@ -5,11 +5,18 @@
 //  Created by Wellington on 03/12/22.
 //
 
+
+// MARK: - Protocol
+
 protocol EmojiInteractorProtocol {
     func setUp(delegate: EmojiInteractorDelegate)
     func fetchEmojiList()
+    func fetchEmojiListFromCache() -> [String: String]?
     func getRandomEmojiImageURL()
 }
+
+
+// MARK: - Delegate
 
 protocol EmojiInteractorDelegate: AnyObject {
     func didFetchEmojiList(emojiList: [String : String], isCached: Bool)
@@ -17,6 +24,9 @@ protocol EmojiInteractorDelegate: AnyObject {
     
     func didGetRandomEmojiImage(url: String?)
 }
+
+
+// MARK: - Class
 
 final class EmojiInteractor {
     
@@ -39,6 +49,9 @@ final class EmojiInteractor {
     }
 }
 
+
+// MARK: - EmojiInteractorProtocol
+
 extension EmojiInteractor: EmojiInteractorProtocol {
     
     func fetchEmojiList() {
@@ -49,12 +62,20 @@ extension EmojiInteractor: EmojiInteractorProtocol {
         }
     }
     
+    func fetchEmojiListFromCache() -> [String: String]? {
+        let emojiList = self.storage.getEmojiList()
+        return emojiList
+    }
+
     func getRandomEmojiImageURL() {
         let emojiList = self.storage.getEmojiList()
         let randomEmojiImageURL = emojiList?.values.randomElement()
         self.delegate?.didGetRandomEmojiImage(url: randomEmojiImageURL)
     }
 }
+
+
+// MARK: - EmojiAdapterDelegate
 
 extension EmojiInteractor: EmojiAdapterDelegate {
     

@@ -25,13 +25,13 @@ final class HomeRouter {
     }
     
     func openEmojiListViewController() {
-        let genericListViewController = EmojiListRouter().getViewController(listType: .emoji)
+        let genericListViewController = GenericListRouter().getViewController(listType: .emoji)
         self.viewController?.navigationController?.pushViewController(genericListViewController, animated: true)
     }
     
 
     func openAvatarListViewController() {
-        let genericListViewController = EmojiListRouter().getViewController(listType: .avatar)
+        let genericListViewController = GenericListRouter().getViewController(listType: .avatar)
         self.viewController?.navigationController?.pushViewController(genericListViewController, animated: true)
     }
 

@@ -5,7 +5,7 @@
 //  Created by Wellington on 04/12/22.
 //
 
-struct EmojiViewModel {
+struct GenericViewModel {
     let id: String
     let imageURL: String
 }

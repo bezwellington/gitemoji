@@ -7,12 +7,18 @@
 
 import Foundation
 
+
+// MARK: - Protocol
+
 protocol AvatarStorageProtocol {
     func save(avatar: Avatar)
     func getAvatar(login: String) -> Avatar?
     func getAvatarList() -> [String: String]?
     func removeAvatar(avatarID: String)
 }
+
+
+// MARK: - Class
 
 final class AvatarStorage: AvatarStorageProtocol {
     

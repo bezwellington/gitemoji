@@ -8,15 +8,24 @@
 
 import Foundation
 
+
+// MARK: - Protocol
+
 protocol AvatarAdapterProtocol {
     func fetchAvatar(text: String)
     func setUp(delegate: AvatarAdapterDelegate)
 }
 
+
+// MARK: - Delegate
+
 protocol AvatarAdapterDelegate: AnyObject {
     func didFetchAvatar(avatar: Avatar)
     func didNotFetchAvatar()
 }
+
+
+// MARK: - Class
 
 final class AvatarAdapter {
     
@@ -24,6 +33,9 @@ final class AvatarAdapter {
     
     private let baseURL: String = "https://api.github.com/users/"
 }
+
+
+// MARK: - AvatarAdapterProtocol
 
 extension AvatarAdapter: AvatarAdapterProtocol {
     
@@ -33,7 +45,10 @@ extension AvatarAdapter: AvatarAdapterProtocol {
     
     func fetchAvatar(text: String) {
                 
-        guard let url = URL(string: self.baseURL + text) else { return }
+        guard let url = URL(string: self.baseURL + text) else {
+            self.delegate?.didNotFetchAvatar()
+            return
+        }
 
         let task = URLSession.shared.dataTask(with: url) { [weak self] (data, response, error) in
             

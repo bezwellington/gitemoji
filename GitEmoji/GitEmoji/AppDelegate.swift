@@ -35,9 +35,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     private func setUpNavigationBar() {
-        UINavigationBar.appearance().tintColor = .black
+        UINavigationBar.appearance().tintColor = .white
+        UINavigationBar.appearance().titleTextAttributes = [ NSAttributedString.Key.foregroundColor : UIColor.white ]
+        
         UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.clear], for: .normal)
         UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.clear], for: UIControl.State.highlighted)
+        
+
     }
 }
 

@@ -7,10 +7,16 @@
 
 import Foundation
 
+
+// MARK: - Protocol
+
 protocol RepoStorageProtocol {
     func save(repoList: [Repo])
     func getRepoList() -> [Repo]?
 }
+
+
+// MARK: - Class
 
 final class RepoStorage: RepoStorageProtocol {
     

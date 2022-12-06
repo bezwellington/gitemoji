@@ -7,10 +7,16 @@
 
 import Foundation
 
+
+// MARK: - Protocol
+
 protocol EmojiStorageProtocol {
     func save(emojiList: [String: String])
     func getEmojiList() -> [String: String]?
 }
+
+
+// MARK: - Class
 
 final class EmojiStorage: EmojiStorageProtocol {
     

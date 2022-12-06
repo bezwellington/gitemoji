@@ -7,15 +7,24 @@
 
 import Foundation
 
+
+// MARK: - Protocol
+
 protocol EmojiAdapterProtocol {
     func fetchEmojiList()
     func setUp(delegate: EmojiAdapterDelegate)
 }
 
+
+// MARK: - Delegate
+
 protocol EmojiAdapterDelegate: AnyObject {
     func didFetchEmojiList(emojiList: [String: String])
     func didNotFetchEmojiList()
 }
+
+
+// MARK: - Class
 
 final class EmojiAdapter {
     
@@ -23,6 +32,9 @@ final class EmojiAdapter {
     
     private let baseURL: String = "https://api.github.com/emojis"
 }
+
+
+// MARK: - EmojiAdapterProtocol
 
 extension EmojiAdapter: EmojiAdapterProtocol {
     
