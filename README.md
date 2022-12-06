@@ -1,6 +1,10 @@
 
 # GitEmoji
 
+## How to run: 
+
+- Open the terminal and run the command "pod install" inside the project directory
+
 ## Architecture: VIPER
 
 ## Design Pattern: 
@@ -8,7 +12,7 @@
 - Mapper: Conversion of entities
 - Adapter: It's communicating with the GitHub API
 
-## Basic communication architecture of the Interactors of the project:
+## Basic communication architecture of the Interactors:
 
 <img width="952" alt="Screenshot 2022-12-05 at 11 45 54" src="https://user-images.githubusercontent.com/17457196/205893902-bbb1ca30-b8a3-4e64-93c9-319a4d0ed703.png">
 
