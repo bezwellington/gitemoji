@@ -7,13 +7,16 @@
 
 import UIKit
 
-final class EmojiListViewController: UIViewController {
+
+// MARK: - Class
+
+final class GenericListViewController: UIViewController {
 
     @IBOutlet weak private var collectionView: UICollectionView!
     
-    private var presenter: EmojiListPresenterProtocol?
+    private var presenter: GenericListPresenterProtocol?
 
-    private var emojiList: [EmojiViewModel] = []
+    private var genericList: [GenericViewModel] = []
     private let refreshControl = UIRefreshControl()
 
     override func viewDidLoad() {
@@ -23,6 +26,10 @@ final class EmojiListViewController: UIViewController {
         self.setUpRefreshControl()
         
         self.presenter?.viewDidLoad()
+    }
+    
+    func setUp(presenter: GenericListPresenterProtocol) {
+        self.presenter = presenter
     }
     
     private func setupCollectionView() {
@@ -42,16 +49,15 @@ final class EmojiListViewController: UIViewController {
     @objc private func didRefresh(_ sender: AnyObject) {
         self.presenter?.didRefresh()
     }
-    
-    func setUp(presenter: EmojiListPresenterProtocol) {
-        self.presenter = presenter
-    }
 }
 
-extension EmojiListViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+
+// MARK: - UICollectionViewDelegate, UICollectionViewDataSource
+
+extension GenericListViewController: UICollectionViewDelegate, UICollectionViewDataSource {
    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.emojiList.count
+        return self.genericList.count
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -63,16 +69,14 @@ extension EmojiListViewController: UICollectionViewDelegate, UICollectionViewDat
             return UICollectionViewCell()
         }
         
-        let emoji = self.emojiList[indexPath.row]
+        let emoji = self.genericList[indexPath.row]
         cell.setUp(imageURL: emoji.imageURL)
         
         return cell
     }
     
-
-    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let emojiViewModel = self.emojiList[indexPath.row]
+        let emojiViewModel = self.genericList[indexPath.row]
 
         let showAlert = UIAlertController(title: "Atenção", message: "Deseja remover esse emoji ?", preferredStyle: .alert)
         let imageView = UIImageView(frame: CGRect(x: 100, y: 70, width: 50, height: 50))
@@ -86,7 +90,7 @@ extension EmojiListViewController: UICollectionViewDelegate, UICollectionViewDat
         
         showAlert.addAction(UIAlertAction(title: "Não", style: .cancel, handler: nil))
         let comfirmButton = UIAlertAction(title: "Sim", style: .default) { _ in
-            self.presenter?.didSelect(emojiViewModel: emojiViewModel)
+            self.presenter?.didSelect(genericViewModel: emojiViewModel)
         }
         showAlert.addAction(comfirmButton)
         
@@ -95,7 +99,10 @@ extension EmojiListViewController: UICollectionViewDelegate, UICollectionViewDat
     
 }
 
-extension EmojiListViewController: UICollectionViewDelegateFlowLayout {
+
+// MARK: - UICollectionViewDelegateFlowLayout
+
+extension GenericListViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         guard let collectionWidth = self.collectionView?.frame.width else { return CGSize(width: 0, height: 0)}
@@ -108,13 +115,20 @@ extension EmojiListViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
-extension EmojiListViewController: EmojiListPresenterDelegate {
-    
-    func show(emojiList: [EmojiViewModel]) {
+
+// MARK: - GenericListPresenterDelegate
+
+extension GenericListViewController: GenericListPresenterDelegate {
+
+    func show(genericList: [GenericViewModel]) {
         DispatchQueue.main.async {
-            self.emojiList = emojiList
+            self.genericList = genericList
             self.collectionView.reloadData()
         }
+    }
+    
+    func showTitle(text: String) {
+        self.title = text
     }
     
     func stopLoading() {

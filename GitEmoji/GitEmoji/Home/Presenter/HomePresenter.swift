@@ -19,12 +19,18 @@ protocol HomePresenterProtocol {
     func didSelectSearchButton(text: String?)
 }
 
+
+// MARK: - Delegate
+
 protocol HomePresenterDelegate: AnyObject {
     func showRandomEmoji(imageURL: String)
     func showAlert(title: String, message: String)
 }
 
-final class HomePresenter: HomePresenterProtocol {
+
+// MARK: - Class
+
+final class HomePresenter {
     
     private weak var delegate: HomePresenterDelegate?
     
@@ -35,6 +41,12 @@ final class HomePresenter: HomePresenterProtocol {
         self.interactor = interactor
         self.interactor.setUp(delegate: self)
     }
+}
+
+
+// MARK: - HomePresenterProtocol
+
+extension HomePresenter: HomePresenterProtocol {
     
     func set(router: HomeRouter) {
         self.router = router
@@ -76,6 +88,9 @@ final class HomePresenter: HomePresenterProtocol {
         }
     }
 }
+
+
+// MARK: - HomeInteractorDelegate
 
 extension HomePresenter: HomeInteractorDelegate {
    

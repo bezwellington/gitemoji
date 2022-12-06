@@ -5,12 +5,18 @@
 //  Created by Wellington on 03/12/22.
 //
 
+
+// MARK: - Protocol
+
 protocol HomeInteractorProtocol {
     func setUp(delegate: HomeInteractorDelegate)
     func fetchEmojiList()
     func getRandomEmoji()
     func fetchAvatar(text: String)
 }
+
+
+// MARK: - Delegate
 
 protocol HomeInteractorDelegate: AnyObject {
     func didGetRandomEmojiImage(url: String?)
@@ -21,6 +27,8 @@ protocol HomeInteractorDelegate: AnyObject {
     func didNotFetchAvatar()
 }
 
+
+// MARK: - Class
 
 final class HomeInteractor {
     
@@ -39,6 +47,9 @@ final class HomeInteractor {
         self.avatarInteractor.setUp(delegate: self)
     }
 }
+
+
+// MARK: - HomeInteractorProtocol
 
 extension HomeInteractor: HomeInteractorProtocol {
     
@@ -59,6 +70,9 @@ extension HomeInteractor: HomeInteractorProtocol {
     }
 }
 
+
+// MARK: - EmojiInteractorDelegate
+
 extension HomeInteractor: EmojiInteractorDelegate {
  
     func didFetchEmojiList(emojiList: [String : String], isCached: Bool) {
@@ -72,6 +86,8 @@ extension HomeInteractor: EmojiInteractorDelegate {
     }
 }
 
+
+// MARK: - AvatarInteractorDelegate
 
 extension HomeInteractor: AvatarInteractorDelegate {
     

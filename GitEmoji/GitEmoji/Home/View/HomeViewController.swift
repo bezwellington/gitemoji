@@ -7,6 +7,9 @@
 
 import UIKit
 
+
+// MARK: - Class
+
 final class HomeViewController: UIViewController {
 
     @IBOutlet weak private var emojiImageView: UIImageView!
@@ -49,9 +52,10 @@ final class HomeViewController: UIViewController {
     @IBAction private func didSelectFetchEmojiButton(_ sender: Any) {
         self.presenter?.didSelectFetchEmojiButton()
     }
-    
-    
 }
+
+
+// MARK: - HomePresenterDelegate
 
 extension HomeViewController: HomePresenterDelegate {
     
