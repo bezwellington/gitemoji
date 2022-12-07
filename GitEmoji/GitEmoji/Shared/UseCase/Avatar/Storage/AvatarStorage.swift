@@ -31,6 +31,11 @@ final class AvatarStorage: AvatarStorageProtocol {
     
     func save(avatar: Avatar) {
         var dict = self.getAvatarList()
+        
+        if dict == nil {
+            dict = [:]
+        }
+        
         dict?[avatar.login.lowercased()] = avatar.avatar_url
         try? self.userDefaults.setObject(dict, forKey: self.key)
     }
